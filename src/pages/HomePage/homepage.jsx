@@ -1,4 +1,4 @@
-import './style.css';
+import './HomePage.css';
 import ZUZEL from './img/ZUZEL.png';
 
 export const HomePage = () => {
