@@ -1,13 +1,16 @@
 .header {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    width: 100%;
 }
 
 .header .logo {
     max-height: 2.5rem;
     display: block;
+    margin: 0.5rem;
 }
+
 .header .sound {
     max-height: 1.7rem;
-    margin: 5px;
+    margin: 0.5rem;
 }
