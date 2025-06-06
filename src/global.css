@@ -1,9 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
   font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: 32px;
+  height: 100%;
+}
+
+body {
+  background-color: #FFE5E5;
+  border: #712D2D solid 10px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

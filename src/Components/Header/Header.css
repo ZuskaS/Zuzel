@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between
+}
+
+.header .logo {
+    max-height: 2.5rem;
+}
+.header .sound_on {
+    max-height: 1.7rem;
+    margin: 5px;
+}
