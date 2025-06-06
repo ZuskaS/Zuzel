@@ -5,8 +5,9 @@
 
 .header .logo {
     max-height: 2.5rem;
+    display: block;
 }
-.header .sound_on {
+.header .sound {
     max-height: 1.7rem;
     margin: 5px;
 }
