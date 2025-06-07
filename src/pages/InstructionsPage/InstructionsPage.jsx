@@ -1,11 +1,11 @@
 import './img/info.png';
 import './InstructionsPage.css';
-import '.img/instruction__grid.png';
-import '.img/lupa.png';
-import '.img/hand.png';
-import '.img/instruction__gridEmpty';
+import './img/instructionGrid.png';
+import './img/lupa.png';
+import './img/hand.png';
+import './img/instruction__gridEmpty.png';
 
-export const InstructionsPages = () => {
+export const InstructionsPage = () => {
   return (
     <div>
       <div className="first__page">

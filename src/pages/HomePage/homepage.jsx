@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 import ZUZEL from './img/ZUZEL.png';
 
@@ -18,12 +19,14 @@ export const HomePage = () => {
           <div></div>
           <div></div>
         </div>
+        <Link to='/tips'>
         <div className="container__btn">
           {/*Tady bude asi komponenta Button*/}
-          <a className="button-index" href="">
+            <p className="button-index" >
             Připravit se na trénink →
-          </a>
+          </p>
         </div>
+        </Link>
       </div>
     </div>
   );
