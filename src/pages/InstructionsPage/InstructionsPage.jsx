@@ -71,7 +71,7 @@ export const InstructionsPage = () => {
 
           <Button onClick={() => setPage(true)} text='zpět' image={arrowLeft} position='left' />
 
-          <Link to='DifficultySelectionPage'>
+          <Link to='/difficulty'>
             <Button text='další' image={arrowRight} position='right' />
           </Link>
         </div>
