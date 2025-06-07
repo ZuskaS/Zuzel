@@ -5,7 +5,7 @@ import arrowRight from '../../img/arrow-right.png';
 import arrowLeft from '../../img/arrow-left.png';
 import lupa from '../../img/lupa.png';
 
-export const Phase1 = ({ size, generateNumbers }) => {
+export const Phase1 = ({ size, generateNumbers, onTest }) => {
   return (
     <div className="container">
       <PageTitle>
@@ -15,7 +15,12 @@ export const Phase1 = ({ size, generateNumbers }) => {
         </div>
       </PageTitle>
       <Grid size={size} numbers={generateNumbers} />
-      <Button text="Jdu na to!" image={arrowRight} position={'right'} />
+      <Button
+        text="Jdu na to!"
+        image={arrowRight}
+        position={'right'}
+        onClick={onTest}
+      />
       <Button text="Zpět" image={arrowLeft} position={'left'} />
     </div>
   );

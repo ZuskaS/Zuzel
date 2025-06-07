@@ -36,7 +36,13 @@ export const GamePage = ({ size }) => {
   };
 
   if (phaseGame === 1) {
-    return <Phase1 size={size} generateNumbers={generateNumbers} />;
+    return (
+      <Phase1
+        size={size}
+        generateNumbers={generateNumbers}
+        onTest={() => setPhaseGame(2)}
+      />
+    );
   }
   if (phaseGame === 2) {
     return (
@@ -44,7 +50,7 @@ export const GamePage = ({ size }) => {
         size={size}
         numbers={userNumbers}
         onUserClick={handleUserSelect}
-        onEvaluate={()=>setPhaseGame(3)}
+        onEvaluate={() => setPhaseGame(3)}
       />
     );
   }

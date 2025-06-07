@@ -17,12 +17,12 @@ export const EvaluationGrid = ({ size, userNumbers, generateNumbers }) => {
               : ''
           } ${
             !userNumbers.includes(index) && generateNumbers.includes(index)
-              ? 'cell--error'
+              ? 'cell--errorMissing'
               : ''
           }
               ${
                 userNumbers.includes(index) && !generateNumbers.includes(index)
-                  ? 'cell--errorMissing'
+                  ? 'cell--error'
                   : ''
               }`}
           key={index}
