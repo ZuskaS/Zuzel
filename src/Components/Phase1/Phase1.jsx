@@ -5,7 +5,7 @@ import arrowRight from '../../img/arrow-right.png';
 import arrowLeft from '../../img/arrow-left.png';
 import lupa from '../../img/lupa.png';
 
-export const Phase1 = ({ size, generateNumbers, onTest }) => {
+export const Phase1 = ({ size, generateNumbers, onTest, name, level }) => {
   return (
     <div className="container">
       <PageTitle>
@@ -14,6 +14,7 @@ export const Phase1 = ({ size, generateNumbers, onTest }) => {
           <p>Zapamatujte si rozložení mřížky.</p>
         </div>
       </PageTitle>
+      <p>{name} {level}/5 </p>
       <Grid size={size} numbers={generateNumbers} />
       <Button
         text="Jdu na to!"

@@ -4,7 +4,7 @@ import arrowRight from '../../img/arrow-right.png';
 import { PageTitle } from '../PageTitle/PageTitle';
 import backIcon from '../../img/back-icon.png';
 
-export const Phase3 = ({ size, generateNumbers, userNumbers, onNewGame, onRestartGame }) => {
+export const Phase3 = ({ size, generateNumbers, userNumbers, onNewGame, onRestartGame, name, level }) => {
   return (
     <div className="container">
       <PageTitle>
@@ -14,6 +14,8 @@ export const Phase3 = ({ size, generateNumbers, userNumbers, onNewGame, onRestar
           <p>Chybně označeno</p>
         </div>
       </PageTitle>
+      
+      <p>{name} {level}/5 </p>
 
       <EvaluationGrid
         size={size}

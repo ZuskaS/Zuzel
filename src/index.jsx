@@ -29,23 +29,11 @@ const router = createBrowserRouter([
         element: <DifficultySelectionsPage />,
       },
       {
-        path: '/game/difficulty1',
-        element: <GamePage size={3}/>,
+        path: `/game/difficulty/:difficulty`,
+        element: <GamePage />,
       },
-        {
-        path: '/game/difficulty2',
-        element: <GamePage size={4}/>,
-      },
-          
-        {
-        path: '/game/difficulty3',
-        element: <GamePage size={4}/>,
-      },
-       {
-        path: '/game/difficulty4',
-        element: <GamePage size={5}/>,
-      },
-
+    
+   
       // {
       //     path: '/navigation',
       //     element: <NavigationPage />
