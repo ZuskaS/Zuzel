@@ -73,6 +73,6 @@ p {
   background-color: white;
   border: #712D2D solid 3px;
   border-radius: 10px;
-  width: fit-content;
+  width: 10rem;
   margin: 0.5rem;
 }
