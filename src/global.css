@@ -14,7 +14,7 @@ body {
   background-color: #FFE5E5;
   border: #712D2D solid 10px;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
