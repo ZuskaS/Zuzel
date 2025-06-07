@@ -19,3 +19,8 @@ body {
   flex-direction: column;
   flex-grow: 1;
 }
+
+a {
+  text-decoration: none;
+
+}

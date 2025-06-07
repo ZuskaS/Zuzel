@@ -1,4 +1,4 @@
-import './img/gear.png'
+import gear from'./img/gear.png'
 import './TipsPage.css'
 import sound_on from '../../Components/Header/img/sound_on.png';
 import ZUZEL from '../HomePage/img/Zuzel.png';

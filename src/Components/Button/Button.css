@@ -1,0 +1,44 @@
+.button {
+    border: 3px solid #712D2D;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: black;
+    padding: 0.3rem;
+    display: block;
+    margin: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    width: 80vw;
+    font-size: 1rem;
+    display: flex;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+}
+
+.button img {
+    max-width: 25px;
+}
+
+.button.left {
+    flex-direction: row-reverse;
+}
+
+.button .text {
+    flex-grow: 1;
+}
+
+.empty {
+    width: 25px;
+
+}
+
+@media (min-width: 768px) {
+
+    .button {
+        max-width: 450px;
+    }
+
+}
