@@ -1,18 +1,19 @@
-import './img/info.png';
+import info from './img/info.png';
 import './InstructionsPage.css';
-import './img/instructionGrid.png';
-import './img/lupa.png';
-import './img/hand.png';
-import './img/instruction__gridEmpty.png';
+import instructionGrid from './img/instructionGrid.png';
+import lupa from './img/lupa.png';
+import hand from './img/hand.png';
+import instruction__gridEmpty from './img/instruction__gridEmpty.png';
+import { PageTitle } from '../../Components/PageTitle/PageTitle';
 
 export const InstructionsPage = () => {
   return (
     <div>
-      <div className="first__page">
-        <div className="page-title">
-          <p>Návod</p>
+      <div className="instructions-1">
+        <PageTitle>
           <img className="icon__info" src={info} alt="ikona informací" />
-        </div>
+          <p>Návod</p>
+        </PageTitle>
 
         <div className="info__text">
           <p> Cílem cvičení je posílit krátkodobou pamět. </p>
@@ -22,7 +23,7 @@ export const InstructionsPage = () => {
           <img className="instruction__lupa" src={lupa} alt="lupa" />
           <img
             className="instruction__grid"
-            src={instruction__grid}
+            src={instructionGrid}
             alt="obrázek mřížky se 3 vyplněnými poli"
           />
         </div>
@@ -32,15 +33,7 @@ export const InstructionsPage = () => {
         </div>
       </div>
 
-      <div className="second__page">
-        <div>
-          <img
-            className="second__page--infoImg"
-            src={info}
-            alt="ikona informací"
-          />
-        </div>
-
+      <div className="instructions-2">
         <div className="instuction__visual--empty">
           <img className="hand" src={hand} alt="ruka ukazující ukazovákem" />
           <img

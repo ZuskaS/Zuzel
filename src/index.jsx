@@ -8,45 +8,45 @@ import { InstructionsPage } from './pages/InstructionsPage/InstructionsPage';
 import './global.css';
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <HomePage />
-    },
-    {
-        element: <App />,
-        children: [
-            {
-                path: '/tips',
-                element: <TipsPage />
-            },
-            {
-                path: '/instruction',
-                element: <InstructionsPage />
-            },
-            // {
-            //     path: '/difficulty',
-            //     element: <DifficultySelectionPage />
-            // },
-            // {
-            //     path: '/memory',
-            //     element: <MemoryPreviewPage />
-            // },
-            // {
-            //     path: '/test',
-            //     element: <MemoryTestPage />
-            // },
-            // {
-            //     path: '/evaluation',
-            //     element: <EvaluationPage />
-            // },
-            // {
-            //     path: '/navigation',
-            //     element: <NavigationPage />
-            // }
-        ]
-    }
+  {
+    path: '/',
+    element: <HomePage />,
+  },
+  {
+    element: <App />,
+    children: [
+      {
+        path: '/tips',
+        element: <TipsPage />,
+      },
+      {
+        path: '/instruction',
+        element: <InstructionsPage />,
+      },
+      // {
+      //     path: '/difficulty',
+      //     element: <DifficultySelectionPage />
+      // },
+      // {
+      //     path: '/memory',
+      //     element: <MemoryPreviewPage />
+      // },
+      // {
+      //     path: '/test',
+      //     element: <MemoryTestPage />
+      // },
+      // {
+      //     path: '/evaluation',
+      //     element: <EvaluationPage />
+      // },
+      // {
+      //     path: '/navigation',
+      //     element: <NavigationPage />
+      // }
+    ],
+  },
 ]);
 
 createRoot(document.querySelector('#app')).render(
-    <RouterProvider router={router} />
+  <RouterProvider router={router} />,
 );
