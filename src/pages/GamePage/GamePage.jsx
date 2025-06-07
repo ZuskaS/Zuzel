@@ -16,7 +16,7 @@ const GenerateRandomNumbers = (count, size) => {
 };
 
 export const GamePage = ({ size }) => {
-  const [phaseGame, setPhaseGame] = useState(2);
+  const [phaseGame, setPhaseGame] = useState(1);
   const [userNumbers, setUserNumbers] = useState([]);
   const [generateNumbers, setGenerateNumbers] = useState([]);
 

@@ -1,0 +1,11 @@
+.cell--success {
+  background-color: #41DE1E;
+}
+
+.cell--error {
+  background-color: #FF3B30;
+}
+
+.cell--errorMissing {
+  background-color: grey;
+}

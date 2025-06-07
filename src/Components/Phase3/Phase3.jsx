@@ -1,9 +1,13 @@
-import { Grid } from '../../Components/Grid/Grid';
+import { EvaluationGrid } from '../EvaluationGrid/EvaluationGrid';
 
 export const Phase3 = ({ size, generateNumbers, userNumbers }) => {
   return (
     <div className="container">
-      {/*<Grid size={size} numbers={generateNumbers} />*/}
+      <EvaluationGrid
+        size={size}
+        generateNumbers={generateNumbers}
+        userNumbers={userNumbers}
+      />
     </div>
   );
 };
