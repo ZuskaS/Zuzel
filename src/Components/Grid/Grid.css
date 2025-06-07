@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+
+    margin: 2rem auto;
+}
+
+.cell {
+    background-color: #FFFFFf;
+    border: 2px solid black;
+    aspect-ratio: 1 / 1;
+}
