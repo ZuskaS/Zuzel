@@ -35,6 +35,18 @@ export const GamePage = ({ size }) => {
     setUserNumbers(updatedNumbers);
   };
 
+  const handleNewGame = () => {
+
+  }
+
+  const handleRestartGame = () => {
+    const RandomNumbers = GenerateRandomNumbers(2, size);
+    setGenerateNumbers(RandomNumbers);
+    setUserNumbers([])
+    setPhaseGame(1)
+  }
+
+
   if (phaseGame === 1) {
     return (
       <Phase1
@@ -60,6 +72,8 @@ export const GamePage = ({ size }) => {
         size={size}
         generateNumbers={generateNumbers}
         userNumbers={userNumbers}
+        onNewGame={handleNewGame}
+        onRestartGame={handleRestartGame}
       />
     );
   }
