@@ -9,19 +9,19 @@ export const DifficultySelectionsPage = () => {
         <p>Vyberte svoji úroveň</p>
       </PageTitle>
 
-      <Link to="/memory">
+      <Link to='/game/difficulty1'>
         <Button text="Začátečník" position="center" />
       </Link>
 
-      <Link to="/memory">
+      <Link to='/game/difficulty2'>
         <Button text="Mírně pokročilý" position="center" />
       </Link>
 
-      <Link to="/memory">
+      <Link to='/game/difficulty3'>
         <Button text="Pokročilý" position="center" />
       </Link>
 
-      <Link to="/memory">
+      <Link to='/game/difficulty4'>
         <Button text="Expert" position="center" />
       </Link>
     </>
