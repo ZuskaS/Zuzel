@@ -5,15 +5,16 @@ import sound_on from '../../Components/Header/img/sound_on.png';
 import ZUZEL from '../HomePage/img/Zuzel.png';
 import { PageTitle } from '../../Components/PageTitle/PageTitle';
 import { Button } from '../../Components/Button/Button';
-import arrowRight from '../../img/arrow-right.png';
+import arrowRight from '../../img/arrow-right.png'
+import arrowLeft from '../../img/arrow-left.png'
+
 import { useState } from 'react';
+import {Link } from 'react-router-dom'
 
 export const TipsPage = () => {
   const [page, setPage] = useState(true);
 
-  return (
-    <>
-      {page ? (
+  return page ? (
         <div className="tips-1">
           <PageTitle>
             <img className="icon_gear" src={gear} alt="ikona ozubeného kola" />
@@ -53,17 +54,19 @@ export const TipsPage = () => {
             </p>
           </div>
 
-          <div className="info__text">
-            <p>Pro pohodlnější ovládání doporučujeme použít dotykové pero.</p>
-          </div>
-          <Button
-            onClick={() => setPage(true)}
-            text="zpět"
-            image={arrowLeft}
-            position="left"
-          />
-        </div>
-      )}
-    </>
-  );
-};
+                <div className='tips-2'>
+                    <div className="info__text">
+                        <p>Pokud aplikace nereaguje, ujistěte se, že se obrazovky nedotýkáte jinými prsty, např. při držení telefonu.</p>
+                    </div>
+
+                    <div className="info__text">
+                        <p>Pro pohodlnější ovládání doporučujeme použít dotykové pero.</p>
+                    </div>
+
+                    <Link to='/instruction'>
+                    <Button text='další' image={arrowLeft} position='left' />
+                    </Link>
+
+                </div>
+                </div>
+            )}
