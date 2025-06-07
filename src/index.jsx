@@ -4,8 +4,11 @@ import { App } from './Components/App/App';
 import { HomePage } from './pages/HomePage/HomePage';
 import { TipsPage } from './pages/TipsPage/TipsPage';
 import { InstructionsPage } from './pages/InstructionsPage/InstructionsPage';
+import { DifficultySelectionsPage } from './pages/DifficultySelectionsPage/DifficultySelectionsPage'
+import { MemoryPreviewPage } from './pages/MemoryPreviewPage/MemoryPreviewPage';
 
 import './global.css';
+
 
 const router = createBrowserRouter([
   {
@@ -23,14 +26,14 @@ const router = createBrowserRouter([
         path: '/instruction',
         element: <InstructionsPage />,
       },
-      // {
-      //     path: '/difficulty',
-      //     element: <DifficultySelectionPage />
-      // },
-      // {
-      //     path: '/memory',
-      //     element: <MemoryPreviewPage />
-      // },
+      {
+          path: '/difficulty',
+          element: <DifficultySelectionsPage />
+      },
+      {
+          path: '/memory',
+          element: <MemoryPreviewPage />
+      },
       // {
       //     path: '/test',
       //     element: <MemoryTestPage />

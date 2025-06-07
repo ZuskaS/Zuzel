@@ -1,7 +1,7 @@
 import info from './img/info.png';
 import './InstructionsPage.css';
 import instructionGrid from './img/instructionGrid.png';
-import lupa from './img/lupa.png';
+import lupa from '../../img/lupa.png';
 import hand from './img/hand.png';
 import instruction__gridEmpty from './img/instruction__gridEmpty.png';
 import { PageTitle } from '../../Components/PageTitle/PageTitle';
