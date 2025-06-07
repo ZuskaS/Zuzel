@@ -44,6 +44,7 @@ export const GamePage = ({ size }) => {
         size={size}
         numbers={userNumbers}
         onUserClick={handleUserSelect}
+        onEvaluate={()=>setPhaseGame(3)}
       />
     );
   }
