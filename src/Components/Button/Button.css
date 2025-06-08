@@ -19,13 +19,17 @@
 }
 
 .button img {
-    max-width: 25px;
+    max-height: 25px;
 }
 
 .button.left {
     flex-direction: row-reverse;
 }
 
+.button.center {
+    flex-direction: column;
+    align-items: center;
+}
 .button .text {
     flex-grow: 1;
 }

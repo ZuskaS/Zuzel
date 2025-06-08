@@ -40,7 +40,9 @@ export const InstructionsPage = () => {
             <div className="info__text">
               <p>V prvním kroku si zapamatujete barevný vzor v mřížce.</p>
             </div>
-
+            <Link to="/difficulty">
+              <Button text="Přeskočit návod"/>
+            </Link>
             <Button
               onClick={() => setPage(false)}
               text="další"
@@ -84,7 +86,7 @@ export const InstructionsPage = () => {
             />
 
             <Link to="/difficulty">
-              <Button text="další" image={arrowRight} position="right" />
+              <Button text="Začít trénink" />
             </Link>
           </div>
         </div>
