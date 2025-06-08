@@ -1,6 +1,31 @@
+import { useEffect } from 'react';
 import './EvaluationGrid.css';
+import { playFailSound, playSuccesSound } from '../../utils/playSound';
 
 export const EvaluationGrid = ({ size, userNumbers, generateNumbers }) => {
+
+  useEffect(() => {
+    if (userNumbers.length !== generateNumbers.length) {
+      playFailSound()
+      return
+    }
+    let isWin = true
+    userNumbers.forEach(userGuess => {
+      const match = generateNumbers.find(item => item.id === userGuess.id && item.color === userGuess.color)
+      if (!match) {
+        isWin = false
+      }
+    })
+    if (isWin) {
+      playSuccesSound()
+    }
+    else {
+      playFailSound()
+    }
+  }, [])
+
+
+
   return (
     <div
       className="grid"
@@ -18,11 +43,12 @@ export const EvaluationGrid = ({ size, userNumbers, generateNumbers }) => {
         const matchErrorMissing = !matchUserNumbers && matchGenerateNumbers
         const matchError = matchUserNumbers && !matchGenerateNumbers
 
+
         return (
           <div
             className={`cell ${matchSuccess
-                ? 'cell--success'
-                : ''
+              ? 'cell--success'
+              : ''
               } ${matchErrorMissing
                 ? 'cell--errorMissing'
                 : ''
