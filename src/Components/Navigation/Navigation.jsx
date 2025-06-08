@@ -21,7 +21,7 @@ export const Navigation = ({difficulty}) => {
       <PageTitle>
         <p>Gratulujeme! Dokončili jste úroveň {currentDifficulty.name}. </p>
       </PageTitle>
-      <div className="dificulty_container">
+      <div className="navigation_container">
         <Link to={`/game/difficulty/${nextDifficulty.id}`}>
           <Button
             text={`Pokračovat na úroveň ${nextDifficulty.name}`}

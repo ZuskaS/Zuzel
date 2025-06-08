@@ -36,7 +36,7 @@ export const Phase2 = ({
         </PageTitle>
 
         <div className="phase2_container">
-          <p>
+          <p className='info_level'>
             {name} {level}/5{' '}
           </p>
           <Grid size={size} numbers={numbers} onUserClick={onUserClick} />

@@ -36,7 +36,7 @@ export const Phase3 = ({
         </div>
       </PageTitle>
       <div className="phase3_container">
-        <p>
+        <p className='info_level'>
           {name} {level}/5{' '}
         </p>
 

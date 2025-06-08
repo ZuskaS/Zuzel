@@ -1,10 +1,10 @@
 .page-title {
   background-color: white;
-  border: #712D2D solid 3px;
-  border-radius: 10px;
+  border: #712D2D solid 1px;
+  border-radius: 4px;
   position: relative;
   width: 9rem;
-  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  padding: 0.2rem;
   margin-inline: auto;
 }
 

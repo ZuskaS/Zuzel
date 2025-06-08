@@ -3,7 +3,6 @@ import { PageTitle } from '../PageTitle/PageTitle';
 import { Button } from '../Button/Button';
 import arrowRight from '../../img/arrow-right.png';
 import arrowLeft from '../../img/arrow-left.png';
-import lupa from '../../img/lupa.png';
 import './Phase1.css';
 import { Link } from 'react-router-dom';
 
@@ -12,11 +11,10 @@ export const Phase1 = ({ size, generateNumbers, onTest, name, level }) => {
     <>
       <div className="container">
         <PageTitle>
-          <img className="instruction__lupa difficulty" src={lupa} alt="lupa" />
           <p>Zapamatujte si rozložení mřížky.</p>
         </PageTitle>
         <div className="phase1_container">
-          <p>
+         <p className='info_level'>
             {name} {level}/5{' '}
           </p>
           <Grid size={size} numbers={generateNumbers} />

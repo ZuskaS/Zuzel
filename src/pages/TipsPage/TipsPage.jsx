@@ -1,4 +1,3 @@
-import gear from './img/gear.png';
 import mute from '../../Components/Header/img/mute.png';
 import './TipsPage.css';
 import sound_on from '../../Components/Header/img/sound_on.png';
@@ -6,7 +5,6 @@ import ZUZEL from '../HomePage/img/ZUZEL.png';
 import { PageTitle } from '../../Components/PageTitle/PageTitle';
 import { Button } from '../../Components/Button/Button';
 import arrowRight from '../../img/arrow-right.png';
-import arrowLeft from '../../img/arrow-left.png';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -17,7 +15,6 @@ export const TipsPage = () => {
   return page ? (
     <>
       <PageTitle>
-        <img className="icon_gear" src={gear} alt="ikona ozubeného kola" />
         <p>Tipy k ovládání aplikace</p>
       </PageTitle>
       <div className="tips-1">
@@ -41,7 +38,7 @@ export const TipsPage = () => {
 
           <Button
             onClick={() => setPage(false)}
-            text="další"
+            text="Další"
             image={arrowRight}
             position="right"
           />
@@ -70,7 +67,7 @@ export const TipsPage = () => {
         </div>
         <div>
           <Link to="/instruction">
-            <Button text="další" image={arrowRight} position="right" />
+            <Button text="Další" image={arrowRight} position="right" />
           </Link>
         </div>
       </div>

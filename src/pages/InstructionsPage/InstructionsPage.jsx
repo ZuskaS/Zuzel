@@ -1,4 +1,3 @@
-import info from './img/info.png';
 import './InstructionsPage.css';
 import instructionGrid from './img/instructionGrid.png';
 import lupa from '../../img/lupa.png';
@@ -19,7 +18,6 @@ export const InstructionsPage = () => {
       {page ? (
         <>
           <PageTitle>
-            <img className="icon__info" src={info} alt="ikona informací" />
             <p>Návod</p>
           </PageTitle>
           <div className="instructions-1">
@@ -29,7 +27,7 @@ export const InstructionsPage = () => {
               </div>
 
               <div className="instuction__visual">
-                <img className="instruction__lupa" src={lupa} alt="lupa" />
+                <img className="instruction__lupa " src={lupa} alt="lupa" />
                 <div className="instructionGrid">
                   <img
                     src={instructionGrid}
@@ -44,7 +42,7 @@ export const InstructionsPage = () => {
 
               <Button
                 onClick={() => setPage(false)}
-                text="další"
+                text="Další"
                 image={arrowRight}
                 position="right"
               />
@@ -80,13 +78,13 @@ export const InstructionsPage = () => {
 
             <Button
               onClick={() => setPage(true)}
-              text="zpět"
+              text="Zpět"
               image={arrowLeft}
               position="left"
             />
 
             <Link to="/difficulty">
-              <Button text="Začít trénink" />
+              <Button text="Začít trénink" image={arrowRight} position="right"/>
             </Link>
           </div>
         </div>
