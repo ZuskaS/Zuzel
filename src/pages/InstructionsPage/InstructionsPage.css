@@ -37,18 +37,6 @@ p {
   background-color: white;
 }
 
-.instruction__lupa {
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
-
-
-
-
 .instuction__visual--empty {
   position: relative;
   margin-inline: auto;
@@ -86,12 +74,20 @@ p {
 
 @media (min-width: 1024px) {
   .instructions_container {
-    max-width: 40vw;
+    max-width: 50vw;
 
   }
 
   .instructions-2,
   .instructions-1 {
     margin-inline: auto;
+  }
+
+  .instructionGrid img {
+    width: 80%;
+  }
+
+    .instructionGrid {
+    text-align: center;
   }
 }

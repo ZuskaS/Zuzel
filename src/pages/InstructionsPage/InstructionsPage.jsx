@@ -27,7 +27,6 @@ export const InstructionsPage = () => {
               </div>
 
               <div className="instuction__visual">
-                <img className="instruction__lupa " src={lupa} alt="lupa" />
                 <div className="instructionGrid">
                   <img
                     src={instructionGrid}
