@@ -32,7 +32,7 @@ const currentDifficulty = (difficulty) => {
     return {
       size: 3,
       name: 'Začátečník',
-      colors: ['#000000'],
+      colors: ['#1c1b1b'],
       counts: [2],
     }
   }
@@ -40,7 +40,7 @@ const currentDifficulty = (difficulty) => {
     return {
       size: 4,
       name: 'Mírně pokročilý',
-      colors: ['#000000'],
+      colors: ['#1c1b1b'],
       counts: [6],
     }
   }
@@ -48,7 +48,7 @@ const currentDifficulty = (difficulty) => {
     return {
       size: 4,
       name: 'Pokročilý',
-      colors: ['#000000', '#FF9500'],
+      colors: ['#1c1b1b', '#FF9500'],
       counts: [5, 1],
     }
   }
@@ -56,7 +56,7 @@ const currentDifficulty = (difficulty) => {
     return {
       size: 5,
       name: 'Expert',
-      colors: ['#000000', '#FF9500', ' #009CA6'],
+      colors: ['#1c1b1b', '#FF9500', ' #009CA6'],
       counts: [5, 4, 1],
     }
   }
