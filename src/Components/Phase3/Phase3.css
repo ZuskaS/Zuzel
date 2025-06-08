@@ -33,8 +33,13 @@
 .bug {
   display: flex;
   flex-direction: row;
-  justify-content: stretch;
+  /*justify-content: stretch;*/
+  align-items: center;
 
+}
+
+.text-left {
+  text-align: left;
 }
 
 @media (min-width: 1024px) {

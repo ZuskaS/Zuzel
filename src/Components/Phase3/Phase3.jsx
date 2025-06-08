@@ -31,7 +31,7 @@ export const Phase3 = ({
           </div>
           <div className="bug">
             <img className="mistake" src={squareCross} alt="křížek chyba" />
-            <p>Chybně označeno</p>
+            <p className="text-left">Chybně označeno</p>
           </div>
         </div>
       </PageTitle>
