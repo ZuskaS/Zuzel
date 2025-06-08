@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Phase1 } from '../../Components/Phase1/Phase1';
 import { Phase2 } from '../../Components/Phase2/Phase2';
 import { Phase3 } from '../../Components/Phase3/Phase3';
-import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Navigation } from '../../Components/Navigation/Navigation';
 import { playClickSound } from '../../utils/playSound';
 
