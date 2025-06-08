@@ -7,3 +7,33 @@
   justify-content: center;
   padding: 0.5rem;
 }
+
+.ok {
+  width: 40px;
+  height: 40px;
+  background-color: #41DE1E;
+  border: black solid 2px;
+}
+
+.none {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  border: black solid 2px;
+}
+
+.mistake {
+  width: 40px;
+  height: 40px;
+  background-color: #FF3B30;
+  border: black solid 2px;
+}
+
+.right,
+.missing,
+.bug {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+
+}

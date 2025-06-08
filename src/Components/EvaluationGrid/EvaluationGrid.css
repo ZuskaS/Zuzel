@@ -1,11 +1,19 @@
 .cell--success {
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-color: #41DE1E;
+  background-image: url(../../img/ok.png);
 }
 
 .cell--error {
+  background-size: contain;
   background-color: #FF3B30;
+  background-image: url(../../img/squareCross.png);
 }
 
 .cell--errorMissing {
+  background-size: contain;
   background-color: grey;
+  background-image: url(../../img/square.png);
 }

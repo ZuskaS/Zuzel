@@ -5,6 +5,14 @@
   position: relative;
   width: 280px;
   padding: 0.5rem 0.5rem 0.2rem 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  /*left: 50%;
+  transform: translateX(-50%);*/
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .page-title {
+    margin-inline: auto;
+    position: ;
+  }
 }

@@ -4,6 +4,9 @@ import arrowRight from '../../img/arrow-right.png';
 import { PageTitle } from '../PageTitle/PageTitle';
 import backIcon from '../../img/back-icon.png';
 import './Phase3.css';
+import ok from '../../img/ok.png';
+import square from '../../img/square.png';
+import squareCross from '../../img/squareCross.png';
 
 export const Phase3 = ({
   size,
@@ -18,9 +21,18 @@ export const Phase3 = ({
     <>
       <PageTitle>
         <div className="pageTitle-memory">
-          <p>Správně</p>
-          <p>Neoznačeno</p>
-          <p>Chybně označeno</p>
+          <div className="right">
+            <img className="ok" src={ok} alt="správně označeno" />
+            <p>Správně</p>
+          </div>
+          <div className="missing">
+            <img className="none" src={square} alt="neoznačené pole" />
+            <p>Neoznačeno</p>
+          </div>
+          <div className="bug">
+            <img className="mistake" src={squareCross} alt="křížek chyba" />
+            <p>Chybně označeno</p>
+          </div>
         </div>
       </PageTitle>
       <div className="phase3_container">
