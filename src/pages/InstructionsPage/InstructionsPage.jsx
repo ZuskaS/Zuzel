@@ -17,40 +17,50 @@ export const InstructionsPage = () => {
   return (
     <div>
       {page ? (
-        <div className="instructions-1">
+        <>
           <PageTitle>
             <img className="icon__info" src={info} alt="ikona informací" />
             <p>Návod</p>
           </PageTitle>
-          <div className="instructions_container">
-            <div className="info__text">
-              <p> Cílem cvičení je posílit krátkodobou pamět. </p>
-            </div>
-
-            <div className="instuction__visual">
-              <img className="instruction__lupa" src={lupa} alt="lupa" />
-              <div className="instructionGrid">
-                <img
-                  src={instructionGrid}
-                  alt="obrázek mřížky se 3 vyplněnými poli"
-                />
+          <div className="instructions-1">
+            <div className="instructions_container">
+              <div className="info__text">
+                <p> Cílem cvičení je posílit krátkodobou pamět. </p>
               </div>
-            </div>
 
-            <div className="info__text">
-              <p>V prvním kroku si zapamatujete barevný vzor v mřížce.</p>
+              <div className="instuction__visual">
+                <img className="instruction__lupa" src={lupa} alt="lupa" />
+                <div className="instructionGrid">
+                  <img
+                    src={instructionGrid}
+                    alt="obrázek mřížky se 3 vyplněnými poli"
+                  />
+                </div>
+              </div>
+
+              <div className="instuction__visual">
+                <img className="instruction__lupa" src={lupa} alt="lupa" />
+                <div className="instructionGrid">
+                  <img
+                    src={instructionGrid}
+                    alt="obrázek mřížky se 3 vyplněnými poli"
+                  />
+                </div>
+              </div>
+
+              <div className="info__text">
+                <p>V prvním kroku si zapamatujete barevný vzor v mřížce.</p>
+              </div>
+
+              <Button
+                onClick={() => setPage(false)}
+                text="další"
+                image={arrowRight}
+                position="right"
+              />
             </div>
-            <Link to="/difficulty">
-              <Button text="Přeskočit návod"/>
-            </Link>
-            <Button
-              onClick={() => setPage(false)}
-              text="další"
-              image={arrowRight}
-              position="right"
-            />
           </div>
-        </div>
+        </>
       ) : (
         <div className="instructions_container">
           <div className="instructions-2">

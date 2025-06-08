@@ -14,7 +14,7 @@ export const Navigation = (name) => {
       <div className="dificulty_container">
         <Link to="/game/difficulty/1">
           <Button
-            text="`Pokračovat na úroveň ${level}` "
+            text="`Pokračovat na úroveň ${difficulty}` "
             image={arrowRight}
             position="right"
           />

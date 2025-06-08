@@ -14,24 +14,26 @@ export const Phase2 = ({
 }) => {
   return (
     <>
-      <PageTitle>
-        <div className="pageTitle-memory">
-          <p>Označte políčka, která byla barevná</p>
+      <div className="container">
+        <PageTitle>
+          <div className="pageTitle-memory">
+            <p>Označte políčka, která byla barevná</p>
+          </div>
+        </PageTitle>
+
+        <div className="phase2_container">
+          <p>
+            {name} {level}/5{' '}
+          </p>
+
+          <Grid size={size} numbers={numbers} onUserClick={onUserClick} />
+          <Button
+            onClick={onEvaluate}
+            text="Zkontrolovat"
+            image={arrowRight}
+            position="right"
+          />
         </div>
-      </PageTitle>
-
-      <div className="phase2_container">
-        <p>
-          {name} {level}/5{' '}
-        </p>
-
-        <Grid size={size} numbers={numbers} onUserClick={onUserClick} />
-        <Button
-          onClick={onEvaluate}
-          text="Zkontrolovat"
-          image={arrowRight}
-          position="right"
-        />
       </div>
     </>
   );

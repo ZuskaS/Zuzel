@@ -3,10 +3,19 @@ import { Button } from '../Button/Button';
 import arrowRight from '../../img/arrow-right.png';
 import { PageTitle } from '../PageTitle/PageTitle';
 import backIcon from '../../img/back-icon.png';
+import './Phase3.css';
 
-export const Phase3 = ({ size, generateNumbers, userNumbers, onNewGame, onRestartGame, name, level }) => {
+export const Phase3 = ({
+  size,
+  generateNumbers,
+  userNumbers,
+  onNewGame,
+  onRestartGame,
+  name,
+  level,
+}) => {
   return (
-    <div className="container">
+    <>
       <PageTitle>
         <div className="pageTitle-memory">
           <p>Správně</p>
@@ -14,18 +23,30 @@ export const Phase3 = ({ size, generateNumbers, userNumbers, onNewGame, onRestar
           <p>Chybně označeno</p>
         </div>
       </PageTitle>
-      
-      <p>{name} {level}/5 </p>
+      <div className="phase3_container">
+        <p>
+          {name} {level}/5{' '}
+        </p>
 
-      <EvaluationGrid
-        size={size}
-        generateNumbers={generateNumbers}
-        userNumbers={userNumbers}
-      />
+        <EvaluationGrid
+          size={size}
+          generateNumbers={generateNumbers}
+          userNumbers={userNumbers}
+        />
 
-      <Button onClick={onNewGame} text='Pokračovat' image={arrowRight} position='right' />
-      <Button onClick={onRestartGame} text='Zopakovat cvičení' image={backIcon} position='left' />
-
-    </div>
+        <Button
+          onClick={onNewGame}
+          text="Pokračovat"
+          image={arrowRight}
+          position="right"
+        />
+        <Button
+          onClick={onRestartGame}
+          text="Zopakovat cvičení"
+          image={backIcon}
+          position="left"
+        />
+      </div>
+    </>
   );
 };
