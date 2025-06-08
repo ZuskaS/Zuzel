@@ -4,16 +4,24 @@ import { Phase2 } from '../../Components/Phase2/Phase2';
 import { Phase3 } from '../../Components/Phase3/Phase3';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const GenerateRandomNumbers = (level, size) => {
+const GenerateRandomNumbers = (level, size, colors, counts) => {
   const result = [];
-  const count = level + 1;
+  const levelCounts = [...counts];
 
-  while (result.length < count) {
-    const RandomNumber = Math.floor(Math.random() * (size * size));
-    if (!result.includes(RandomNumber)) {
-      result.push({id: RandomNumber, color:'black'});
+  levelCounts[levelCounts.length - 1] += (level - 1)
+
+
+ levelCounts.forEach((count, index) => {
+    const previousLength = result.length
+    while (result.length - previousLength < count) {
+      const RandomNumber = Math.floor(Math.random() * (size * size));
+      if (!result.find(item => item.id===RandomNumber)) {
+        result.push({ id: RandomNumber, color: colors[index] });
+      }
     }
-  }
+  })
+
+
   return result;
 };
 
@@ -22,24 +30,32 @@ const currentDifficulty = (difficulty) => {
     return {
       size: 3,
       name: 'Začátečník',
+      colors: ['#000000'],
+      counts: [2],
     }
   }
   if (difficulty === 2) {
     return {
       size: 4,
       name: 'Mírně pokročilý',
+      colors: ['#000000'],
+      counts: [6],
     }
   }
   if (difficulty === 3) {
     return {
       size: 4,
       name: 'Pokročilý',
+      colors: ['#000000', '#FF9500'],
+      counts: [5, 1],
     }
   }
   if (difficulty === 4) {
     return {
       size: 5,
       name: 'Expert',
+      colors: ['#000000', '#FF9500', ' #009CA6'],
+      counts: [5, 4, 1],
     }
   }
 }
@@ -48,7 +64,7 @@ export const GamePage = () => {
   const { difficulty: stringDifficulty } = useParams();
   const difficulty = Number(stringDifficulty)
   let navigate = useNavigate();
-  const { size, name } = currentDifficulty(difficulty);
+  const { size, name, colors, counts } = currentDifficulty(difficulty);
 
   const [phaseGame, setPhaseGame] = useState(1);
   const [level, setLevel] = useState(1)
@@ -56,19 +72,19 @@ export const GamePage = () => {
   const [generateNumbers, setGenerateNumbers] = useState([]);
 
   useEffect(() => {
-    const RandomNumbers = GenerateRandomNumbers(level, size);
+    const RandomNumbers = GenerateRandomNumbers(level, size, colors, counts);
     setGenerateNumbers(RandomNumbers);
   }, []);
 
   const handleUserSelect = (index) => {
     let updatedNumbers;
 
-    const selectedCell = userNumbers.find(item => item.id===index)
+    const selectedCell = userNumbers.find(item => item.id === index)
 
     if (selectedCell) {
       updatedNumbers = userNumbers.filter((item) => item.id !== index);
     } else {
-      updatedNumbers = [...userNumbers, {id:index, color:'black'}];
+      updatedNumbers = [...userNumbers, { id: index, color: 'black' }];
     }
     setUserNumbers(updatedNumbers);
   };
@@ -86,14 +102,14 @@ export const GamePage = () => {
     else {
       setLevel(level + 1)
     }
-    const RandomNumbers = GenerateRandomNumbers((level + 1), size);
+    const RandomNumbers = GenerateRandomNumbers((level + 1), size, colors, counts);
     setGenerateNumbers(RandomNumbers);
     setUserNumbers([])
     setPhaseGame(1)
   }
 
   const handleRestartGame = () => {
-    const RandomNumbers = GenerateRandomNumbers(level, size);
+    const RandomNumbers = GenerateRandomNumbers(level, size, colors, counts);
     setGenerateNumbers(RandomNumbers);
     setUserNumbers([])
     setPhaseGame(1)

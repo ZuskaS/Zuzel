@@ -6,11 +6,7 @@
 }
 
 .cell {
-    background-color: #FFFFFf;
+    background-color: #FFFFFF;
     border: 2px solid black;
     aspect-ratio: 1 / 1;
-}
-
-.selected {
-     background-color: black;
 }
