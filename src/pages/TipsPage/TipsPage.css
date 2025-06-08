@@ -32,3 +32,10 @@
 .img__logo {
   margin-left: 4rem;
 }
+
+@media (min-width: 1024px) {
+  .tips-1 .tips-2 {
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
