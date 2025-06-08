@@ -11,7 +11,7 @@ export const Grid = ({ size, numbers, onUserClick }) => {
     >
       {Array.from({ length: size * size }, (_, index) => (
         <div
-          className={`cell ${numbers.includes(index) ? 'selected' : ''}`}
+          className={`cell ${numbers.find(item => item.id === index) ? 'selected' : ''}`}
           key={index}
           onClick={() => onUserClick(index)}
         ></div>

@@ -11,7 +11,7 @@ const GenerateRandomNumbers = (level, size) => {
   while (result.length < count) {
     const RandomNumber = Math.floor(Math.random() * (size * size));
     if (!result.includes(RandomNumber)) {
-      result.push(RandomNumber);
+      result.push({id: RandomNumber, color:'black'});
     }
   }
   return result;
@@ -62,10 +62,13 @@ export const GamePage = () => {
 
   const handleUserSelect = (index) => {
     let updatedNumbers;
-    if (userNumbers.includes(index)) {
-      updatedNumbers = userNumbers.filter((number) => number !== index);
+
+    const selectedCell = userNumbers.find(item => item.id===index)
+
+    if (selectedCell) {
+      updatedNumbers = userNumbers.filter((item) => item.id !== index);
     } else {
-      updatedNumbers = [...userNumbers, index];
+      updatedNumbers = [...userNumbers, {id:index, color:'black'}];
     }
     setUserNumbers(updatedNumbers);
   };

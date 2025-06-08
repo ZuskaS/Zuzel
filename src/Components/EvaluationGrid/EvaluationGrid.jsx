@@ -9,25 +9,32 @@ export const EvaluationGrid = ({ size, userNumbers, generateNumbers }) => {
         gridTemplateRows: `repeat(${size}, 1fr)`,
       }}
     >
-      {Array.from({ length: size * size }, (_, index) => (
-        <div
-          className={`cell ${
-            userNumbers.includes(index) && generateNumbers.includes(index)
-              ? 'cell--success'
-              : ''
-          } ${
-            !userNumbers.includes(index) && generateNumbers.includes(index)
-              ? 'cell--errorMissing'
-              : ''
-          }
-              ${
-                userNumbers.includes(index) && !generateNumbers.includes(index)
-                  ? 'cell--error'
-                  : ''
+      {Array.from({ length: size * size }, (_, index) => {
+        const matchUserNumbers = userNumbers.find(item => item.id === index)
+        const matchGenerateNumbers = generateNumbers.find(item => item.id === index)
+
+        const matchSuccess = matchUserNumbers && matchGenerateNumbers && matchUserNumbers.color === matchGenerateNumbers.color
+
+        const matchErrorMissing = !matchUserNumbers && matchGenerateNumbers
+        const matchError = matchUserNumbers && !matchGenerateNumbers
+
+        return (
+          <div
+            className={`cell ${matchSuccess
+                ? 'cell--success'
+                : ''
+              } ${matchErrorMissing
+                ? 'cell--errorMissing'
+                : ''
+              }
+              ${matchError
+                ? 'cell--error'
+                : ''
               }`}
-          key={index}
-        ></div>
-      ))}
+            key={index}
+          ></div>
+        )
+      })}
     </div>
   );
 };
