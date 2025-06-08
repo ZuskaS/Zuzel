@@ -52,8 +52,8 @@ export const InstructionsPage = () => {
           </div>
         </>
       ) : (
-        <div className="instructions_container">
-          <div className="instructions-2">
+        <div className="instructions-2">
+          <div className="instructions_container">
             <div className="info__text">
               <p>
                 {' '}

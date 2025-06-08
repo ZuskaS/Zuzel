@@ -33,9 +33,6 @@ p {
 }
 
 .instuction__visual {
-  /*display: flex;
-  flex-direction: row;
-  align-items: center;*/
   position: relative;
 }
 
@@ -55,18 +52,19 @@ p {
   bottom: 0;
   right: 0;
   z-index: 1;
-
-
 }
 
 .instuction__visual--empty {
   position: relative;
+  margin-inline: auto;
+  width: 80%;
 }
 
 .instruction__grid--empty {
-  width: 60vw;
+  width: 100%;
   height: auto;
   background-color: white;
+  display: block;
 }
 
 
@@ -87,4 +85,16 @@ p {
   border-radius: 10px;
   width: fit-content;
   margin: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .instructions_container {
+    max-width: 40vw;
+
+  }
+
+  .instructions-2,
+  .instructions-1 {
+    margin-inline: auto;
+  }
 }

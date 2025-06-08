@@ -49,8 +49,8 @@ export const TipsPage = () => {
       </div>
     </>
   ) : (
-    <div className="tips_container">
-      <div className="tips-2">
+    <div className="tips-2">
+      <div className="tips_container">
         <div className="info__text">
           <p>
             Pokud aplikace nereaguje, ujistěte se, že se obrazovky nedotýkáte
@@ -58,22 +58,20 @@ export const TipsPage = () => {
           </p>
         </div>
 
-        <div className="tips-2">
-          <div className="info__text">
-            <p>
-              Pokud aplikace nereaguje, ujistěte se, že se obrazovky nedotýkáte
-              jinými prsty, např. při držení telefonu.
-            </p>
-          </div>
+        <div className="info__text">
+          <p>
+            Pokud aplikace nereaguje, ujistěte se, že se obrazovky nedotýkáte
+            jinými prsty, např. při držení telefonu.
+          </p>
+        </div>
 
-          <div className="info__text">
-            <p>Pro pohodlnější ovládání doporučujeme použít dotykové pero.</p>
-          </div>
-          <div>
-            <Link to="/instruction">
-              <Button text="další" image={arrowRight} position="right" />
-            </Link>
-          </div>
+        <div className="info__text">
+          <p>Pro pohodlnější ovládání doporučujeme použít dotykové pero.</p>
+        </div>
+        <div>
+          <Link to="/instruction">
+            <Button text="další" image={arrowRight} position="right" />
+          </Link>
         </div>
       </div>
     </div>

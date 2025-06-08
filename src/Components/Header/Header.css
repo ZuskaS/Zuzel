@@ -14,3 +14,14 @@
     max-height: 1rem;
     margin: 0.25rem 0.5rem 0.25rem 0.25rem;
 }
+
+@media (min-width: 1024px) {
+
+    .header .logo {
+        max-height: 3.3rem;
+    }
+
+    .header .sound {
+        max-height: 2.2rem;
+    }
+}
