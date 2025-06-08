@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Phase1 } from '../../Components/Phase1/Phase1';
 import { Phase2 } from '../../Components/Phase2/Phase2';
 import { Phase3 } from '../../Components/Phase3/Phase3';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import { Navigation } from '../../Components/Navigation/Navigation';
 
 const GenerateRandomNumbers = (level, size, colors, counts) => {
   const result = [];
@@ -100,22 +101,24 @@ export const GamePage = () => {
   };
 
   const handleNewGame = () => {
+    
     if (level === 5 && difficulty === 4) {
       navigate(`/difficulty`)
       return
     }
 
     if (level === 5) {
-      navigate(`/game/difficulty/${difficulty + 1}`)
-      setLevel(1)
+      setPhaseGame(4)
+      return;
     }
     else {
       setLevel(level + 1)
+      setPhaseGame(1)
+
     }
     const RandomNumbers = GenerateRandomNumbers((level + 1), size, colors, counts);
     setGenerateNumbers(RandomNumbers);
     setUserNumbers([])
-    setPhaseGame(1)
   }
 
   const handleRestartGame = () => {
@@ -162,5 +165,10 @@ export const GamePage = () => {
         onRestartGame={handleRestartGame}
       />
     );
+  }
+  if (phaseGame === 4) {
+    return (
+      <Navigation difficulty={difficulty} />
+    )
   }
 };

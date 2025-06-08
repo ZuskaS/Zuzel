@@ -1,28 +1,38 @@
 import { Button } from '../../Components/Button/Button';
 import { Link } from 'react-router-dom';
 import { PageTitle } from '../../Components/PageTitle/PageTitle';
-import './DifficultySelectionsPage.css';
+import './Navigation.css';
 import arrowRight from '../../img/arrow-right.png';
 import arrowLeft from '../../img/arrow-left.png';
 
-export const Navigation = (name) => {
+const difficulties = [
+  { id: 1, name: 'Začátečník' },
+  { id: 2, name: 'Mírně pokročilý' },
+  { id: 3, name: 'Pokročilý' },
+  { id: 4, name: 'Expert' }
+]
+
+export const Navigation = ({difficulty}) => {
+  const currentDifficultyIndex = difficulties.findIndex(item => item.id === difficulty)
+  const currentDifficulty = difficulties[currentDifficultyIndex]
+  const nextDifficulty = difficulties[currentDifficultyIndex + 1 ]
   return (
     <>
       <PageTitle>
-        <p>Gratulujeme! Dokončili jste úroveň {name}. </p>
+        <p>Gratulujeme! Dokončili jste úroveň {currentDifficulty.name}. </p>
       </PageTitle>
       <div className="dificulty_container">
-        <Link to="/game/difficulty/1">
+        <Link to={`/game/difficulty/${nextDifficulty.id}`}>
           <Button
-            text="`Pokračovat na úroveň ${difficulty}` "
+            text={`Pokračovat na úroveň ${nextDifficulty.name}`}
             image={arrowRight}
             position="right"
           />
         </Link>
 
-        <Link to="/game/difficulty/2">
+        <Link to={`/game/difficulty/${currentDifficulty.id}`}>
           <Button
-            text="`Zopakovat úroveň ${level}` "
+            text={`Zopakovat úroveň ${currentDifficulty.name}`}
             image={arrowLeft}
             position="left"
           />

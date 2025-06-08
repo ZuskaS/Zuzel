@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-dom';
 import { App } from './Components/App/App';
 import { HomePage } from './pages/HomePage/HomePage';
 import { TipsPage } from './pages/TipsPage/TipsPage';
@@ -7,6 +7,11 @@ import { InstructionsPage } from './pages/InstructionsPage/InstructionsPage';
 import { DifficultySelectionsPage } from './pages/DifficultySelectionsPage/DifficultySelectionsPage';
 import { GamePage } from './pages/GamePage/GamePage';
 import './global.css';
+
+const GamePageWrapper = () => {
+  const location = useLocation()
+  return <GamePage key={location.key}></GamePage>
+}
 
 const router = createBrowserRouter([
   {
@@ -30,15 +35,9 @@ const router = createBrowserRouter([
       },
       {
         path: `/game/difficulty/:difficulty`,
-        element: <GamePage />,
+        element: <GamePageWrapper />,
       },
-    
-   
-      // {
-      //     path: '/navigation',
-      //     element: <NavigationPage />
-      // }
-    ],
+     ],
   },
 ]);
 
