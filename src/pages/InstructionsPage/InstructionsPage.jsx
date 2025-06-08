@@ -38,16 +38,6 @@ export const InstructionsPage = () => {
                 </div>
               </div>
 
-              <div className="instuction__visual">
-                <img className="instruction__lupa" src={lupa} alt="lupa" />
-                <div className="instructionGrid">
-                  <img
-                    src={instructionGrid}
-                    alt="obrázek mřížky se 3 vyplněnými poli"
-                  />
-                </div>
-              </div>
-
               <div className="info__text">
                 <p>V prvním kroku si zapamatujete barevný vzor v mřížce.</p>
               </div>
