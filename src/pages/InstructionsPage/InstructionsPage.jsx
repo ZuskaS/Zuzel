@@ -22,64 +22,71 @@ export const InstructionsPage = () => {
             <img className="icon__info" src={info} alt="ikona informací" />
             <p>Návod</p>
           </PageTitle>
-
-          <div className="info__text">
-            <p> Cílem cvičení je posílit krátkodobou pamět. </p>
-          </div>
-
-          <div className="instuction__visual">
-            <img className="instruction__lupa" src={lupa} alt="lupa" />
-            <div className="instructionGrid">
-              <img
-                src={instructionGrid}
-                alt="obrázek mřížky se 3 vyplněnými poli"
-              />
+          <div className="instructions_container">
+            <div className="info__text">
+              <p> Cílem cvičení je posílit krátkodobou pamět. </p>
             </div>
-          </div>
 
-          <div className="info__text">
-            <p>V prvním kroku si zapamatujete barevný vzor v mřížce.</p>
-          </div>
+            <div className="instuction__visual">
+              <img className="instruction__lupa" src={lupa} alt="lupa" />
+              <div className="instructionGrid">
+                <img
+                  src={instructionGrid}
+                  alt="obrázek mřížky se 3 vyplněnými poli"
+                />
+              </div>
+            </div>
 
-          <Button
-            onClick={() => setPage(false)}
-            text="další"
-            image={arrowRight}
-            position="right"
-          />
+            <div className="info__text">
+              <p>V prvním kroku si zapamatujete barevný vzor v mřížce.</p>
+            </div>
+
+            <Button
+              onClick={() => setPage(false)}
+              text="další"
+              image={arrowRight}
+              position="right"
+            />
+          </div>
         </div>
       ) : (
-        <div className="instructions-2">
-          <div className="info__text">
-            <p>
-              {' '}
-              Po odpočtu se zobrazí prázdná mřížka a vaším úkolem je označit
-              správná políčka.
-            </p>
-          </div>
-          <div className="instuction__visual--empty">
-            <img
-              className="instruction__grid--empty"
-              src={instruction__gridEmpty}
-              alt="obrázek mřížky se prázdnými poli"
+        <div className="instructions_container">
+          <div className="instructions-2">
+            <div className="info__text">
+              <p>
+                {' '}
+                Po odpočtu se zobrazí prázdná mřížka a vaším úkolem je označit
+                správná políčka.
+              </p>
+            </div>
+            <div className="instuction__visual--empty">
+              <img
+                className="instruction__grid--empty"
+                src={instruction__gridEmpty}
+                alt="obrázek mřížky se prázdnými poli"
+              />
+              <img
+                className="hand"
+                src={hand}
+                alt="ruka ukazující ukazovákem"
+              />
+            </div>
+
+            <div className="info__text">
+              <p> Barvu měníte opakovaným kliknutím na čtverec. </p>
+            </div>
+
+            <Button
+              onClick={() => setPage(true)}
+              text="zpět"
+              image={arrowLeft}
+              position="left"
             />
-            <img className="hand" src={hand} alt="ruka ukazující ukazovákem" />
+
+            <Link to="/difficulty">
+              <Button text="další" image={arrowRight} position="right" />
+            </Link>
           </div>
-
-          <div className="info__text">
-            <p> Barvu měníte opakovaným kliknutím na čtverec. </p>
-          </div>
-
-          <Button
-            onClick={() => setPage(true)}
-            text="zpět"
-            image={arrowLeft}
-            position="left"
-          />
-
-          <Link to="/difficulty">
-            <Button text="další" image={arrowRight} position="right" />
-          </Link>
         </div>
       )}
     </div>
