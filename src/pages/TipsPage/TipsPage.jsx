@@ -66,7 +66,7 @@ export const TipsPage = () => {
         </div>
 
         <Link to="/instruction">
-          <Button text="další" image={arrowLeft} position="left" />
+          <Button text="další" image={arrowRight} position="right" />
         </Link>
       </div>
     </div>

@@ -8,11 +8,11 @@ import { PageTitle } from '../../Components/PageTitle/PageTitle';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Button } from '../../Components/Button/Button';
-import arrowRight from '../../img/arrow-right.png'
-import arrowLeft from '../../img/arrow-left.png'
+import arrowRight from '../../img/arrow-right.png';
+import arrowLeft from '../../img/arrow-left.png';
 
 export const InstructionsPage = () => {
-  const [page, setPage] = useState(true)
+  const [page, setPage] = useState(true);
 
   return (
     <div>
@@ -41,14 +41,15 @@ export const InstructionsPage = () => {
             <p>V prvním kroku si zapamatujete barevný vzor v mřížce.</p>
           </div>
 
-          <Button onClick={() => setPage(false)} text='další' image={arrowRight} position='right' />
-
+          <Button
+            onClick={() => setPage(false)}
+            text="další"
+            image={arrowRight}
+            position="right"
+          />
         </div>
-
       ) : (
-
-
-        < div className="instructions-2">
+        <div className="instructions-2">
           <div className="info__text">
             <p>
               {' '}
@@ -69,13 +70,18 @@ export const InstructionsPage = () => {
             <p> Barvu měníte opakovaným kliknutím na čtverec. </p>
           </div>
 
-          <Button onClick={() => setPage(true)} text='zpět' image={arrowLeft} position='left' />
+          <Button
+            onClick={() => setPage(true)}
+            text="zpět"
+            image={arrowLeft}
+            position="left"
+          />
 
-          <Link to='/difficulty'>
-            <Button text='další' image={arrowRight} position='right' />
+          <Link to="/difficulty">
+            <Button text="další" image={arrowRight} position="right" />
           </Link>
         </div>
       )}
-    </div >
+    </div>
   );
 };

@@ -22,9 +22,13 @@ export const HomePage = () => {
         <div></div>
       </div>
       <Link to="/tips">
-        <Button text="Připravit se na trénink" />
-        {/* <Button text='Připravit se na trénink' image={arrowRight} position='right' />
-          <Button text='Připravit se na trénink' image={arrowLeft} position='left' /> */}
+        <Button
+          text="Připravit se na trénink"
+          image={arrowRight}
+          position="right"
+        />
+        {/*<Button text="Připravit se na trénink" />
+               <Button text='Připravit se na trénink' image={arrowLeft} position='left' />*/}
       </Link>
     </div>
   );
