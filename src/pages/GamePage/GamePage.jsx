@@ -4,6 +4,7 @@ import { Phase2 } from '../../Components/Phase2/Phase2';
 import { Phase3 } from '../../Components/Phase3/Phase3';
 import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import { Navigation } from '../../Components/Navigation/Navigation';
+import { playClickSound } from '../../utils/playSound';
 
 const GenerateRandomNumbers = (level, size, colors, counts) => {
   const result = [];
@@ -98,6 +99,7 @@ export const GamePage = () => {
       updatedNumbers = [...userNumbers, { id: index, color: colors[0] }];
     }
     setUserNumbers(updatedNumbers);
+    playClickSound();
   };
 
   const handleNewGame = () => {

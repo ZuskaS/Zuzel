@@ -16,7 +16,7 @@ export const Grid = ({ size, numbers, onUserClick }) => {
         <div
           className='cell'
           key={index}
-          onClick={() => onUserClick(index)}
+          onClick={() => onUserClick?.(index)}
           style={{backgroundColor: selectedCell?.color}}
         ></div>
       )})}

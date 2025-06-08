@@ -6,10 +6,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Header = () => {
-  const [sound, setSound] = useState(true);
+  const [sound, setSound] = useState(localStorage.getItem('sound') ===  'on');
 
   const toggleSound = () => {
-    setSound(!sound);
+    const newValue = !sound;
+    setSound(newValue)
+    localStorage.setItem("sound", newValue ? 'on' : 'off');
   };
 
   return (
@@ -21,7 +23,7 @@ export const Header = () => {
         onClick={toggleSound}
         className="sound"
         src={sound ? sound_on : mute}
-        alt={sound ? 'zvuk zapnuto' : 'zvuk vypnuto'}
+        alt={sound? 'zvuk zapnuto' : 'zvuk vypnuto'}
       />
     </div>
   );
