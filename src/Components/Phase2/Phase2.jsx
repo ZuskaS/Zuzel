@@ -12,6 +12,7 @@ export const Phase2 = ({
   onEvaluate,
   name,
   level,
+  difficulty,
 }) => {
 
   const [countdown, setCountdown] = useState(3);
@@ -30,7 +31,7 @@ export const Phase2 = ({
       <div className="container">
         <PageTitle>
           <div className="pageTitle-memory">
-            <p>Označte políčka, která byla barevná</p>
+            <p>{difficulty < 3 ? 'Označte políčka, která byla barevná' : 'Barvu změníte kliknutím na stejné pole'}</p>
           </div>
         </PageTitle>
 
@@ -38,8 +39,8 @@ export const Phase2 = ({
           <p>
             {name} {level}/5{' '}
           </p>
-            <Grid size={size} numbers={numbers} onUserClick={onUserClick} />
-           { countdown > 0  && <div className='timer'>{countdown}</div>} 
+          <Grid size={size} numbers={numbers} onUserClick={onUserClick} />
+          {countdown > 0 && <div className='timer'>{countdown}</div>}
           <Button
             onClick={onEvaluate}
             text="Zkontrolovat"

@@ -103,7 +103,7 @@ export const GamePage = () => {
   };
 
   const handleNewGame = () => {
-    
+
     if (level === 5 && difficulty === 4) {
       navigate(`/end`)
       return
@@ -151,7 +151,7 @@ export const GamePage = () => {
         numbers={userNumbers}
         onUserClick={handleUserSelect}
         onEvaluate={() => setPhaseGame(3)}
-
+        difficulty={difficulty}
       />
     );
   }
