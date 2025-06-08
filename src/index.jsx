@@ -7,6 +7,7 @@ import { InstructionsPage } from './pages/InstructionsPage/InstructionsPage';
 import { DifficultySelectionsPage } from './pages/DifficultySelectionsPage/DifficultySelectionsPage';
 import { GamePage } from './pages/GamePage/GamePage';
 import './global.css';
+import { End } from './Components/End/End';
 
 const GamePageWrapper = () => {
   const location = useLocation()
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
         path: `/game/difficulty/:difficulty`,
         element: <GamePageWrapper />,
       },
-     ],
+      {
+        path: `/end`,
+        element: <End />,
+      },
+    ],
   },
 ]);
 

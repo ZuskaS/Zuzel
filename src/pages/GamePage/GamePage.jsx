@@ -56,7 +56,7 @@ const currentDifficulty = (difficulty) => {
     return {
       size: 5,
       name: 'Expert',
-      colors: ['#1c1b1b', '#FF9500', ' #009CA6'],
+      colors: ['#333333', '#FF9500', ' #009CA6'],
       counts: [5, 4, 1],
     }
   }
@@ -105,7 +105,7 @@ export const GamePage = () => {
   const handleNewGame = () => {
     
     if (level === 5 && difficulty === 4) {
-      navigate(`/difficulty`)
+      navigate(`/end`)
       return
     }
 
