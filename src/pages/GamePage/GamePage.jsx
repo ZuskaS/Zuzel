@@ -11,11 +11,11 @@ const GenerateRandomNumbers = (level, size, colors, counts) => {
   levelCounts[levelCounts.length - 1] += (level - 1)
 
 
- levelCounts.forEach((count, index) => {
+  levelCounts.forEach((count, index) => {
     const previousLength = result.length
     while (result.length - previousLength < count) {
       const RandomNumber = Math.floor(Math.random() * (size * size));
-      if (!result.find(item => item.id===RandomNumber)) {
+      if (!result.find(item => item.id === RandomNumber)) {
         result.push({ id: RandomNumber, color: colors[index] });
       }
     }
@@ -81,10 +81,20 @@ export const GamePage = () => {
 
     const selectedCell = userNumbers.find(item => item.id === index)
 
-    if (selectedCell) {
+    if (selectedCell && selectedCell.color === colors[colors.length - 1]) {
       updatedNumbers = userNumbers.filter((item) => item.id !== index);
-    } else {
-      updatedNumbers = [...userNumbers, { id: index, color: 'black' }];
+    } else if (selectedCell) {
+      updatedNumbers = userNumbers.map((item) => {
+        if (item.id === selectedCell.id) {
+          const currentColorIndex = colors.findIndex(item => item === selectedCell.color)
+          return { id: selectedCell.id, color: colors[currentColorIndex + 1] }
+        }
+        return item
+      })
+    }
+
+    else {
+      updatedNumbers = [...userNumbers, { id: index, color: colors[0] }];
     }
     setUserNumbers(updatedNumbers);
   };
@@ -136,6 +146,7 @@ export const GamePage = () => {
         numbers={userNumbers}
         onUserClick={handleUserSelect}
         onEvaluate={() => setPhaseGame(3)}
+
       />
     );
   }
