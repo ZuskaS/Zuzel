@@ -25,9 +25,3 @@ a {
   text-decoration: none;
 
 }
-
-@media (min-width: 1024px) {
-  html {
-    font-size: 40px;
-  }
-}

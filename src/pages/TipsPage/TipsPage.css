@@ -35,15 +35,27 @@
   margin-left: 4rem;
 }
 
+@media (min-width: 768px) {
+  .tips_container {
+    max-width: 60vw;
+  }
+}
+
 @media (min-width: 1024px) {
   .tips_container {
     max-width: 50vw;
-    justify-content: flex-start;
   }
 
   .tips-1,
   .tips-2 {
     margin-inline: auto;
+  }
 
+  .sound_icons {
+    justify-content: space-evenly;
+  }
+
+  .img__logo {
+    margin-left: 7rem;
   }
 }

@@ -11,6 +11,7 @@
 @media (min-width: 1024px) {
   .page-title {
     margin-inline: auto;
-    width: 27vw;
+    width: 11rem;
+
   }
 }
