@@ -31,7 +31,6 @@ p {
 .instructionGrid {
   flex-grow: 1;
   width: 8rem;
-  height: 8rem;
   clip-path: inset(5%);
 }
 
@@ -44,8 +43,7 @@ p {
 .instuction__visual--empty {
   position: relative;
   margin-inline: auto;
-  width: 7rem;
-  height: 7.7rem;
+  width: 6rem;
 }
 
 .instruction__grid--empty {
@@ -85,8 +83,7 @@ p {
 
 @media (min-width: 1024px) {
   .instructions_container {
-    max-width: 50vw;
-
+    max-width: 45vw;
   }
 
   .instructions-2,
@@ -101,4 +98,8 @@ p {
   .instructionGrid {
     text-align: center;
   }
+}
+
+.instuction__container {
+  display: flex;
 }
