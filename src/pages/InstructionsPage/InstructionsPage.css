@@ -13,8 +13,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 0.5rem;
+  justify-content: flex-start;
+  padding-top: 0.5rem;
 }
 
 
@@ -30,24 +30,30 @@ p {
 
 .instructionGrid {
   flex-grow: 1;
+  width: 8rem;
+  height: 8rem;
+  clip-path: inset(5%);
 }
 
 .instructionGrid img {
   width: 100%;
   background-color: white;
+
 }
 
 .instuction__visual--empty {
   position: relative;
   margin-inline: auto;
-  width: 80%;
-}
+  width: 7rem;
+  height: 7.7rem;
+   }
 
 .instruction__grid--empty {
   width: 100%;
   height: auto;
   background-color: white;
   display: block;
+  margin-block: 0.5rem;
 }
 
 
@@ -67,7 +73,8 @@ p {
   border: #712D2D solid 1px;
   border-radius: 4px;
   width: fit-content;
-  margin: 0.5rem;
+  margin-inline: 0.5rem;
+  margin-top: 0.3rem;
 }
 
 
@@ -87,7 +94,7 @@ p {
     width: 80%;
   }
 
-    .instructionGrid {
+  .instructionGrid {
     text-align: center;
   }
 }

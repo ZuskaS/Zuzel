@@ -24,6 +24,7 @@
 
 .button.left {
     flex-direction: row-reverse;
+    justify-content: center;
 }
 
 .button.center {
