@@ -41,7 +41,7 @@ export const EvaluationGrid = ({ size, userNumbers, generateNumbers }) => {
         const matchSuccess = matchUserNumbers && matchGenerateNumbers && matchUserNumbers.color === matchGenerateNumbers.color
 
         const matchErrorMissing = !matchUserNumbers && matchGenerateNumbers
-        const matchError = matchUserNumbers && !matchGenerateNumbers
+        const matchError = (matchUserNumbers && !matchGenerateNumbers) || (matchUserNumbers?.color !== matchGenerateNumbers?.color);
 
 
         return (
