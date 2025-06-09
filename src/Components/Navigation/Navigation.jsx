@@ -19,7 +19,7 @@ export const Navigation = ({difficulty}) => {
   return (
     <>
       <PageTitle>
-        <p>Gratulujeme! Dokončili jste úroveň {currentDifficulty.name}. </p>
+        <p>Gratulujeme!<br/> Dokončili jste úroveň {currentDifficulty.name}. </p>
       </PageTitle>
       <div className="navigation_container">
         <Link to={`/game/difficulty/${nextDifficulty.id}`}>

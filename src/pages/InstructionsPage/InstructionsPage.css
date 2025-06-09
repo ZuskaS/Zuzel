@@ -21,7 +21,7 @@
 p {
   text-align: center;
   margin: 0;
-  padding: 0.25rem;
+  padding: 0.1rem;
 }
 
 .instuction__visual {
@@ -46,7 +46,7 @@ p {
   margin-inline: auto;
   width: 7rem;
   height: 7.7rem;
-   }
+}
 
 .instruction__grid--empty {
   width: 100%;
@@ -77,7 +77,11 @@ p {
   margin-top: 0.3rem;
 }
 
-
+@media (min-width: 668px) {
+  .instructions_container {
+    max-width: 80vw;
+  }
+}
 
 @media (min-width: 1024px) {
   .instructions_container {

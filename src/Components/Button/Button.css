@@ -41,9 +41,7 @@
 }
 
 @media (min-width: 768px) {
-
     .button {
         max-width: 450px;
     }
-
 }
