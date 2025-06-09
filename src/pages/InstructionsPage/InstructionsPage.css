@@ -75,15 +75,15 @@ p {
   margin-top: 0.3rem;
 }
 
-@media (min-width: 668px) {
+@media (min-width: 768px) {
   .instructions_container {
-    max-width: 80vw;
+    max-width: 60vw;
   }
 }
 
 @media (min-width: 1024px) {
   .instructions_container {
-    max-width: 45vw;
+    max-width: 40vw;
   }
 
   .instructions-2,
@@ -98,8 +98,11 @@ p {
   .instructionGrid {
     text-align: center;
   }
-}
 
-.instuction__container {
-  display: flex;
+  .info__text {
+    width: 40vw;
+  }
 }
+  .instuction__container {
+    display: flex;
+  }
