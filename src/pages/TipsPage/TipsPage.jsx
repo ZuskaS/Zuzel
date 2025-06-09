@@ -45,12 +45,17 @@ export const TipsPage = () => {
             </div>
             <div className="info__text">
               <p>
-                Pokud aplikace nereaguje, ujistěte se, že se obrazovky
-                nedotýkáte jinými prsty, např. při držení telefonu.
+                Pokud aplikaci budete používat v mobilním telefonu či tabletu a
+                nebude nereagovat, ujistěte se, že se obrazovky nedotýkáte
+                jinými prsty, např. při držení telefonu.
               </p>
             </div>
             <div className="info__text">
-              <p>Pro pohodlnější ovládání doporučujeme použít dotykové pero.</p>
+              <p>
+                Taktéž pokud budete trénovat paměť v mobilním telefonu či na
+                tabletu pro pohodlnější ovládání doporučujeme použít dotykové
+                pero.
+              </p>
             </div>
             <div>
               <Link to="/instruction">
