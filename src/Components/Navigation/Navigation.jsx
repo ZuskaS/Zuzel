@@ -4,6 +4,8 @@ import { PageTitle } from '../../Components/PageTitle/PageTitle';
 import './Navigation.css';
 import arrowRight from '../../img/arrow-right.png';
 import arrowLeft from '../../img/arrow-left.png';
+import headLeft from './img/head_left.png'
+import headRight from './img/head_right.png'
 
 const difficulties = [
   { id: 1, name: 'Začátečník' },
@@ -22,6 +24,10 @@ export const Navigation = ({difficulty}) => {
         <p>Gratulujeme!<br/> Dokončili jste úroveň {currentDifficulty.name}. </p>
       </PageTitle>
       <div className="navigation_container">
+        <div className="navigation_images">
+        <img className="head_left" src={headLeft} alt="Hlava se žárovkou vlevo" />
+        <img className="head_right" src={headRight} alt="Hlava se žárovkou vpravo" />
+        </div>
         <Link to={`/game/difficulty/${nextDifficulty.id}`}>
           <Button
             text={`Pokračovat na úroveň ${nextDifficulty.name}`}

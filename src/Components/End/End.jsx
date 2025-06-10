@@ -9,7 +9,7 @@ export const End = () => {
     return (
         <>
             <PageTitle>
-                <p>Uzel rozmotán. Gratulujeme!</p>
+                <p>Mozkový uzel ZUZEL rozmotán. Gratulujeme!</p>
             </PageTitle>
             <div className="end_container">
                 <VideoComponent />

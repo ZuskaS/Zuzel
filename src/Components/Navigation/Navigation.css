@@ -5,3 +5,18 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+.navigation_images {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.head_left {
+  height: 2rem;
+}
+
+.head_right {
+  height: 3.5rem;
+}
