@@ -57,6 +57,11 @@ export const TipsPage = () => {
                 pero.
               </p>
             </div>
+            <div className="info__text">
+              <p>
+                ZUZEL můžete trénovat i ve dvou - spolupráce vám pomůže zvládnout i náročnější úrovně.
+              </p>
+            </div>
             <div>
               <Link to="/instruction">
                 <Button text="Další" image={arrowRight} position="right" />
@@ -101,11 +106,15 @@ export const TipsPage = () => {
                 nereaguje, ujistěte se, že se obrazovky nedotýkáte jinými prsty.
               </p>
             </div>
-
             <div className="info__text">
               <p>
                 Pro pohodlnější ovládání v telefonu či tabletu doporučujeme
                 použít dotykové pero.
+              </p>
+            </div>
+            <div className="info__text">
+              <p>
+                ZUZEL můžete trénovat i ve dvou - spolupráce vám pomůže zvládnout i náročnější úrovně.
               </p>
             </div>
             <div>
