@@ -4,13 +4,20 @@ import './Grid.css';
 export const Grid = ({ size, numbers, onUserClick }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const cellRefs = useRef([]);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
-    cellRefs.current[activeIndex]?.focus();
-  }, [activeIndex]);
+    if (hasInteracted) {
+      cellRefs.current[activeIndex]?.focus();
+    }
+  }, [activeIndex, hasInteracted]);
+
 
   const handleKeyDown = (e) => {
     let newIndex = activeIndex;
+
+    if (!hasInteracted) setHasInteracted(true);
+
 
     if (e.key === 'ArrowRight' && (activeIndex + 1) % size !== 0) newIndex++;
     if (e.key === 'ArrowLeft' && activeIndex % size !== 0) newIndex--;
@@ -43,8 +50,8 @@ export const Grid = ({ size, numbers, onUserClick }) => {
             className={`cell ${activeIndex === index ? 'focused' : ''}`}
             key={index}
             ref={(el) => (cellRefs.current[index] = el)}
-            tabIndex={activeIndex === index ? 0 : -1}
-            onClick={() => onUserClick?.(index)}
+            tabIndex={hasInteracted && activeIndex === index ? 0 : -1
+            } onClick={() => onUserClick?.(index)}
             onKeyDown={handleKeyDown}
             style={{ backgroundColor: selectedCell?.color }}
           ></div>

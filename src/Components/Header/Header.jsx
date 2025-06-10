@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Header = () => {
-  const [sound, setSound] = useState(localStorage.getItem('sound') ===  'on');
+  const [sound, setSound] = useState(localStorage.getItem('sound') === 'on');
 
   const toggleSound = () => {
     const newValue = !sound;
@@ -19,12 +19,21 @@ export const Header = () => {
       <Link to="/">
         <img className="logo" src={ZUZEL} alt="logo ZUZEL" />
       </Link>
-      <img
-        onClick={toggleSound}
+      <div
         className="sound"
-        src={sound ? sound_on : mute}
-        alt={sound? 'zvuk zapnuto' : 'zvuk vypnuto'}
-      />
+        onClick={toggleSound}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleSound();
+          }
+        }}
+        tabIndex="0"
+        role="button"
+        aria-label={sound ? 'vypnout zvuk' : 'zapnout zvuk'}
+      >
+        <img src={sound ? sound_on : mute} alt={sound ? 'zvuk zapnuto' : 'zvuk vypnuto'} />
+      </div>
     </div>
   );
 };

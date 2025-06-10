@@ -14,8 +14,8 @@
     outline: none;
 }
 
-.cell.focused {
-    box-shadow: 0 0 0 3px #007acc;
+.cell.focused:focus-visible {
+  box-shadow: 0 0 0 3px #007acc;
 }
 
 .selected {
