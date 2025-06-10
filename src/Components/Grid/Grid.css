@@ -10,12 +10,20 @@
     aspect-ratio: 1 / 1;
 }
 
+.cell:focus {
+    outline: none;
+}
+
+.cell.focused {
+    box-shadow: 0 0 0 3px #007acc;
+}
+
 .selected {
     background-color: black;
 }
 
 @media (min-width: 1024px) {
-   .grid {
-     width: 80%;
-   }
+    .grid {
+        width: 80%;
+    }
 }
