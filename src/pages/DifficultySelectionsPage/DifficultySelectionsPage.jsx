@@ -10,11 +10,10 @@ import './DifficultySelectionsPage.css';
 
 export const DifficultySelectionsPage = () => {
   return (
-    <>
+      <div className="dificulty_container">
       <PageTitle>
         <p>Vyberte svoji úroveň</p>
       </PageTitle>
-      <div className="dificulty_container">
         <Link to="/game/difficulty/1">
           <Button text="Začátečník" position="center" image={star1} />
         </Link>
@@ -31,6 +30,5 @@ export const DifficultySelectionsPage = () => {
           <Button text="Expert" position="center" image={star4} />
         </Link>
       </div>
-    </>
   );
 };

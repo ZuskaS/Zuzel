@@ -18,7 +18,7 @@ export const Phase3 = ({
   level,
 }) => {
   return (
-    <>
+      <div className="container">
       <PageTitle>
         <div className="pageTitle-memory">
           <div className="right">
@@ -59,6 +59,6 @@ export const Phase3 = ({
           position="left"
         />
       </div>
-    </>
+    </div>
   );
 };

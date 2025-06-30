@@ -81,11 +81,11 @@ export const InstructionsPage = () => {
         </div>
       ) : page ? (
         <div>
-          <PageTitle>
-            <p>Návod</p>
-          </PageTitle>
           <div className="instructions-1">
             <div className="instructions_container">
+              <PageTitle>
+                <p>Návod</p>
+              </PageTitle>
               <div className="info__text">
                 <p>Cílem cvičení je posílit krátkodobou paměť.</p>
               </div>

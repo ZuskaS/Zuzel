@@ -27,7 +27,6 @@ export const Phase2 = ({
 
 
   return (
-    <>
       <div className="container">
         <PageTitle>
           <div className="pageTitle-memory">
@@ -49,6 +48,5 @@ export const Phase2 = ({
           />
         </div>
       </div>
-    </>
   );
 };
