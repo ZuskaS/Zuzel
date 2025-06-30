@@ -51,7 +51,7 @@ a.button-link:focus {
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
     .button {
         max-width: 450px;
     }

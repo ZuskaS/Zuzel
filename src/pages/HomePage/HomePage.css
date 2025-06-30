@@ -1,5 +1,5 @@
 .img__logo-home {
-  width: 6.2rem;
+  width: 8.5rem;
   max-width: 100%;
   height: auto;
   display: block;
@@ -64,7 +64,6 @@ h1 {
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 1rem;
     margin-bottom: 0.3rem;
   }
 
