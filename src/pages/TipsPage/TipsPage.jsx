@@ -23,55 +23,59 @@ export const TipsPage = () => {
 
   return (
     <div>
-      <PageTitle>
-        <p>Tipy k ovládání aplikace</p>
-      </PageTitle>
       {isDesktop ? (
-        <div className="tips-desktop">
-          <div className="tips_container">
-            <div className="info__text">
-              <p>
-                Zvuky aplikace lze zapnout nebo vypnout ikonou v pravém horním
-                rohu.
-              </p>
-              <div className="sound_icons">
-                <img className="icon_sound" src={sound_on} alt="ikona zvuku" />
-                <img className="mute" src={mute} alt="ikona vypnutého zvuku" />
+        <div>
+          <PageTitle>
+            <p>Tipy k ovládání aplikace</p>
+          </PageTitle>
+          <div className="tips-desktop">
+            <div className="tips_container">
+              <div className="info__text">
+                <p>
+                  Zvuky aplikace lze zapnout nebo vypnout ikonou v pravém horním
+                  rohu.
+                </p>
+                <div className="sound_icons">
+                  <img className="icon_sound" src={sound_on} alt="ikona zvuku" />
+                  <img className="mute" src={mute} alt="ikona vypnutého zvuku" />
+                </div>
               </div>
-            </div>
-            <div className="info__text">
-              <p>Ikona loga v levém horním rohu Vás vrátí na úvodní stranu.</p>
-              <img className="img__logo" src={ZUZEL} alt="logo ZUZEL" />
-            </div>
-            <div className="info__text">
-              <p>
-                Pokud aplikaci budete používat v mobilním telefonu či tabletu a
-                nebude reagovat, ujistěte se, že se obrazovky nedotýkáte jinými
-                prsty, např. při držení přístroje.
-              </p>
-            </div>
-            <div className="info__text">
-              <p>
-                Taktéž pokud budete trénovat paměť v mobilním telefonu či na
-                tabletu pro pohodlnější ovládání doporučujeme použít dotykové
-                pero.
-              </p>
-            </div>
-            <div className="info__text">
-              <p>
-                ZUZEL můžete trénovat i ve dvou - spolupráce vám pomůže zvládnout i náročnější úrovně.
-              </p>
-            </div>
-            <div>
-              <Link to="/instruction">
-                <Button text="Další" image={arrowRight} position="right" />
-              </Link>
+              <div className="info__text">
+                <p>Ikona loga v levém horním rohu Vás vrátí na úvodní stranu.</p>
+                <img className="img__logo" src={ZUZEL} alt="logo ZUZEL" />
+              </div>
+              <div className="info__text">
+                <p>
+                  Pokud aplikaci budete používat v mobilním telefonu či tabletu a
+                  nebude reagovat, ujistěte se, že se obrazovky nedotýkáte jinými
+                  prsty, např. při držení přístroje.
+                </p>
+              </div>
+              <div className="info__text">
+                <p>
+                  Pro pohodlnější ovládání v telefonu či tabletu doporučujeme
+                  použít dotykové pero.
+                </p>
+              </div>
+              <div className="info__text">
+                <p>
+                  ZUZEL můžete trénovat i ve dvou - spolupráce vám pomůže zvládnout i náročnější úrovně.
+                </p>
+              </div>
+              <div>
+                <Link to="/instruction">
+                  <Button text="Další" image={arrowRight} position="right" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       ) : page ? (
         <div className="tips-1">
           <div className="tips_container">
+            <PageTitle>
+              <p>Tipy k ovládání aplikace</p>
+            </PageTitle>
             <div className="info__text">
               <p>
                 {' '}
@@ -88,7 +92,6 @@ export const TipsPage = () => {
               <p>Ikona loga v levém horním rohu Vás vrátí na úvodní stranu.</p>
               <img className="img__logo" src={ZUZEL} alt="logo ZUZEL" />
             </div>
-
             <Button
               onClick={() => setPage(false)}
               text="Další"
@@ -102,14 +105,13 @@ export const TipsPage = () => {
           <div className="tips_container">
             <div className="info__text">
               <p>
-                Pokud používáte mobilní telefon nebo tablet a aplikace
-                nereaguje, ujistěte se, že se obrazovky nedotýkáte jinými prsty.
+                Používáte telefon nebo tablet a aplikace
+                nereaguje? Ujistěte se, že se obrazovky nedotýkáte jinými prsty.
               </p>
             </div>
             <div className="info__text">
               <p>
-                Pro pohodlnější ovládání v telefonu či tabletu doporučujeme
-                použít dotykové pero.
+                Pro pohodlnější ovládání doporučujeme použít dotykové pero.
               </p>
             </div>
             <div className="info__text">
@@ -124,7 +126,8 @@ export const TipsPage = () => {
             </div>
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
