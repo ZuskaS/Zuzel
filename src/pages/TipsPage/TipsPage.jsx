@@ -105,8 +105,7 @@ export const TipsPage = () => {
           <div className="tips_container">
             <div className="info__text">
               <p>
-                Používáte telefon nebo tablet a aplikace
-                nereaguje? Ujistěte se, že se obrazovky nedotýkáte jinými prsty.
+                Aplikace nereaguje? Ujistěte se, že se obrazovky nedotýkáte jinými prsty.
               </p>
             </div>
             <div className="info__text">

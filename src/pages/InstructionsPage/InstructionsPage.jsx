@@ -139,13 +139,6 @@ export const InstructionsPage = () => {
               <p>Barvu měníte opakovaným kliknutím.</p>
             </div>
 
-            <Button
-              onClick={() => setPage(true)}
-              text="Zpět"
-              image={arrowLeft}
-              position="left"
-            />
-
             <Link to="/difficulty">
               <Button text="Začít trénink" image={arrowRight} position="right" />
             </Link>
