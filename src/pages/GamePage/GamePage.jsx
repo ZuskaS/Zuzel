@@ -152,6 +152,7 @@ export const GamePage = () => {
         onUserClick={handleUserSelect}
         onEvaluate={() => setPhaseGame(3)}
         difficulty={difficulty}
+        onRestartGame={handleRestartGame}
       />
     );
   }

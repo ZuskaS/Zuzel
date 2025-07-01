@@ -46,6 +46,13 @@ width: 100%;
 padding-bottom: 0;
 }
 
+.buttons_container {
+  display: flex;
+  justify-content: center;
+  max-width: 90vw;
+  width: 100%;
+}
+
 
 @media (min-width: 1024px) {
   .phase3_container {

@@ -1,5 +1,5 @@
 .img__logo-home {
-  width: 6.2rem;
+  width: 6.5rem;
   max-width: 100%;
   height: auto;
   display: block;
@@ -59,12 +59,12 @@ h1 {
     width: 100%;
   }
 
-}
-
-
-@media (min-width: 1024px) {
-  h1 {
-    margin-bottom: 0.3rem;
+  .img__logo-home {
+    width: 6.2rem;
   }
 
+  .logo__grid {
+    grid-template-columns: repeat(3, 2rem);
+    grid-template-rows: repeat(3, 2rem);
+  }
 }

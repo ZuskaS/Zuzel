@@ -14,36 +14,34 @@ const difficulties = [
   { id: 4, name: 'Expert' }
 ]
 
-export const Navigation = ({difficulty}) => {
+export const Navigation = ({ difficulty }) => {
   const currentDifficultyIndex = difficulties.findIndex(item => item.id === difficulty)
   const currentDifficulty = difficulties[currentDifficultyIndex]
-  const nextDifficulty = difficulties[currentDifficultyIndex + 1 ]
+  const nextDifficulty = difficulties[currentDifficultyIndex + 1]
   return (
-    <>
+    <div className="navigation_container">
       <PageTitle>
-        <p>Gratulujeme!<br/> Dokončili jste úroveň {currentDifficulty.name}. </p>
+        <p>Gratulujeme!<br /> Dokončili jste úroveň {currentDifficulty.name}. </p>
       </PageTitle>
-      <div className="navigation_container">
-        <div className="navigation_images">
+      <div className="navigation_images">
         <img className="head_left" src={headLeft} alt="Hlava se žárovkou vlevo" />
         <img className="head_right" src={headRight} alt="Hlava se žárovkou vpravo" />
-        </div>
-        <Link to={`/game/difficulty/${nextDifficulty.id}`}>
-          <Button
-            text={`Pokračovat na úroveň ${nextDifficulty.name}`}
-            image={arrowRight}
-            position="right"
-          />
-        </Link>
-
-        <Link to={`/game/difficulty/${currentDifficulty.id}`}>
-          <Button
-            text={`Zopakovat úroveň ${currentDifficulty.name}`}
-            image={arrowLeft}
-            position="left"
-          />
-        </Link>
       </div>
-    </>
+      <Link to={`/game/difficulty/${nextDifficulty.id}`}>
+        <Button
+          text={`Pokračovat na úroveň ${nextDifficulty.name}`}
+          image={arrowRight}
+          position="right"
+        />
+      </Link>
+
+      <Link to={`/game/difficulty/${currentDifficulty.id}`}>
+        <Button
+          text={`Zopakovat úroveň ${currentDifficulty.name}`}
+          image={arrowLeft}
+          position="left"
+        />
+      </Link>
+    </div>
   );
 };

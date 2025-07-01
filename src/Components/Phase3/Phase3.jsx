@@ -18,7 +18,7 @@ export const Phase3 = ({
   level,
 }) => {
   return (
-      <div className="container">
+    <div className="container">
       <PageTitle>
         <div className="pageTitle-memory">
           <div className="right">
@@ -45,19 +45,21 @@ export const Phase3 = ({
           generateNumbers={generateNumbers}
           userNumbers={userNumbers}
         />
-
-        <Button
-          onClick={onNewGame}
-          text="Pokračovat"
-          image={arrowRight}
-          position="right"
-        />
-        <Button
-          onClick={onRestartGame}
-          text="Zopakovat cvičení"
-          image={backIcon}
-          position="left"
-        />
+        <div className="buttons_container">
+           <Button
+            onClick={onRestartGame}
+            text="Zopakovat"
+            image={backIcon}
+            position="left"
+          />
+          <Button
+            onClick={onNewGame}
+            text="Další"
+            image={arrowRight}
+            position="right"
+          />
+         
+        </div>
       </div>
     </div>
   );

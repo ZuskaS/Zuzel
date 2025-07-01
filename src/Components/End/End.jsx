@@ -7,17 +7,15 @@ import './End.css'
 
 export const End = () => {
     return (
-        <>
+        <div className="end_container">
             <PageTitle>
                 <p>Mozkový uzel ZUZEL rozmotán. Gratulujeme!</p>
             </PageTitle>
-            <div className="end_container">
-                <VideoComponent />
-                <Link to="/difficulty">
-                    <Button text="Začít trénink od začátku" image={arrowLeft} position="left" />
-                </Link>
-            </div>
 
-        </>
+            <VideoComponent />
+            <Link to="/difficulty">
+                <Button text="Začít trénink od začátku" image={arrowLeft} position="left" />
+            </Link>
+        </div>
     )
 }

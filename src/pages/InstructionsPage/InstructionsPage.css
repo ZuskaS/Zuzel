@@ -73,6 +73,7 @@ p {
   width: fit-content;
   margin-inline: 0.5rem;
   margin-top: 0.3rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {

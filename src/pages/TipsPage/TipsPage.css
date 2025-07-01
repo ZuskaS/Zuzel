@@ -31,10 +31,6 @@
   width: 2rem;
 }
 
-.img__logo {
-  margin-left: 4rem;
-}
-
 @media (min-width: 768px) {
   .tips_container {
     max-width: 60vw;
