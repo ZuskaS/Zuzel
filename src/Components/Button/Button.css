@@ -31,26 +31,27 @@
     flex-direction: column;
     align-items: center;
 }
+
 .button .text {
     flex-grow: 1;
 }
 
 .button.right .text {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .button.left .text {
-  margin-left: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .buttons_container .button.left {
-  width: 55%;
-  min-width: 210px;
+    min-width: 210px;
+    margin: 0;
 }
 
 .buttons_container .button.right {
-  width: 35%;
-  min-width: 130px;
+    min-width: 130px;
+    margin: 0 0 0 8px;
 }
 
 .empty {
@@ -60,13 +61,13 @@
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #007acc;
-  outline-offset: 2px;
-  border-radius: 4px;
+    outline: 2px solid #007acc;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 a.button-link:focus {
-  outline: none;
+    outline: none;
 }
 
 @media (min-width: 500px) {
