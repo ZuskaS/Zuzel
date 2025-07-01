@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
 }
 
 .ok {
@@ -40,10 +40,10 @@
 }
 
 .info_level {
-font-size: 0.8rem;
-text-align: left;
-width: 100%;
-padding-bottom: 0;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 0;
 }
 
 .buttons_container {

@@ -1,5 +1,5 @@
 .img__logo-home {
-  width: 6.5rem;
+  width: 7rem;
   max-width: 100%;
   height: auto;
   display: block;
@@ -64,7 +64,7 @@ h1 {
   }
 
   .logo__grid {
-    grid-template-columns: repeat(3, 2rem);
-    grid-template-rows: repeat(3, 2rem);
+    grid-template-columns: repeat(3, 2.3rem);
+    grid-template-rows: repeat(3, 2.3rem);
   }
 }

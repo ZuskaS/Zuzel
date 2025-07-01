@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0;
-  padding-top: 0.3rem;
 }
 
 .tips-1,
@@ -49,9 +48,5 @@
 
   .sound_icons {
     justify-content: space-evenly;
-  }
-
-  .img__logo {
-    margin-left: 7rem;
   }
 }
