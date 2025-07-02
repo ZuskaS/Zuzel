@@ -59,4 +59,8 @@
   .phase3_container {
     max-width: 40vw;
   }
+
+  .info_level {
+    padding: 0.1rem 0 0.1rem 1.5rem
+  }
 }

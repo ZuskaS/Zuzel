@@ -13,6 +13,9 @@
 .cell:focus {
     outline: none;
 }
+.cell:hover {
+    cursor: pointer;
+}
 
 .cell.focused:focus-visible {
   box-shadow: 0 0 0 3px #007acc;
