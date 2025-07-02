@@ -1,7 +1,7 @@
 .grid {
     display: grid;
     width: 100%;
-    margin: 0.5rem auto;
+    margin: 0 auto 0.5rem auto;
 }
 
 .cell {

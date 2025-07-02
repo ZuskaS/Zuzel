@@ -24,7 +24,6 @@
 
 .button.left {
     flex-direction: row-reverse;
-    justify-content: center;
 }
 
 .button.center {
@@ -68,6 +67,10 @@ button:focus-visible {
 
 a.button-link:focus {
     outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 500px) {

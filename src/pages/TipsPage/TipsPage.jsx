@@ -46,8 +46,8 @@ export const TipsPage = () => {
               </div>
               <div className="info__text">
                 <p>
-                  Pokud aplikaci budete používat v mobilním telefonu či tabletu a
-                  nebude reagovat, ujistěte se, že se obrazovky nedotýkáte jinými
+                  Pokud aplikaci používáte v telefonu či tabletu a
+                   nereaguje, ujistěte se, že se obrazovky nedotýkáte jinými
                   prsty, např. při držení přístroje.
                 </p>
               </div>

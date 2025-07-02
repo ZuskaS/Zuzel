@@ -15,6 +15,10 @@
     margin: 0.5rem 0.5rem 0 0.25rem;
 }
 
+.sound:hover {
+    cursor: pointer;
+}
+
 .sound-button:focus-visible {
     outline: 2px solid #007acc;
     outline-offset: 2px;
@@ -27,7 +31,8 @@
         max-height: 3.3rem;
     }
 
-    .header .sound {
-        max-height: 2.2rem;
+    .sound img {
+        max-height: 1.7rem;
+        margin: 0.8rem 0.5rem 0 0.25rem;
     }
 }
