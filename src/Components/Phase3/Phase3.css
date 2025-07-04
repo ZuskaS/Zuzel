@@ -50,17 +50,21 @@
 .buttons_container {
   display: flex;
   justify-content: center;
-  max-width: 90vw;
-  width: 100%;
+  max-width: 88vw;
 }
 
 
 @media (min-width: 1024px) {
-  .phase3_container {
-    max-width: 40vw;
-  }
-
   .info_level {
     padding: 0.1rem 0 0.1rem 1.5rem
   }
+  .buttons_container {
+      max-width: 40vw;
+  }
+}
+
+@media (min-width: 500px) {
+    .buttons_container {
+        max-width: 450px;
+    }
 }
